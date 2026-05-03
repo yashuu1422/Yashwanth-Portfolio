@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BugWhack – Debug the Code!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SCREENS -->
+  <div id="start-screen" class="screen active">
+    <div class="logo">🐛</div>
+    <h1>BugWhack</h1>
+    <p class="tagline">Click the bugs before they crash your code!</p>
+    <div class="difficulty-row">
+      <button class="diff-btn active" data-diff="easy">Easy</button>
+      <button class="diff-btn" data-diff="medium">Medium</button>
+      <button class="diff-btn" data-diff="hard">Hard</button>
+    </div>
+    <button id="start-btn" class="primary-btn">Start Game</button>
+    <div class="hi-score-display">Best: <span id="hi-score-display">0</span></div>
+  </div>
+
+  <div id="game-screen" class="screen">
+    <header class="hud">
+      <div class="hud-item">
+        <span class="hud-label">Score</span>
+        <span id="score">0</span>
+      </div>
+      <div class="hud-item center">
+        <span class="hud-label">Time</span>
+        <span id="timer">30</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Lives</span>
+        <span id="lives">❤️❤️❤️</span>
+      </div>
+    </header>
+
+    <div id="combo-banner"></div>
+    <div id="grid"></div>
+  </div>
+
+  <div id="end-screen" class="screen">
+    <div id="end-icon">🏆</div>
+    <h2 id="end-title">Game Over!</h2>
+    <div class="final-score-box">
+      <div class="final-stat">
+        <span class="stat-label">Score</span>
+        <span id="final-score">0</span>
+      </div>
+      <div class="final-stat">
+        <span class="stat-label">Bugs Squashed</span>
+        <span id="final-bugs">0</span>
+      </div>
+      <div class="final-stat">
+        <span class="stat-label">Best Combo</span>
+        <span id="final-combo">0x</span>
+      </div>
+      <div class="final-stat">
+        <span class="stat-label">High Score</span>
+        <span id="final-hi">0</span>
+      </div>
+    </div>
+    <div id="rank-badge"></div>
+    <div class="end-btns">
+      <button id="play-again-btn" class="primary-btn">Play Again</button>
+      <button id="menu-btn" class="secondary-btn">Menu</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

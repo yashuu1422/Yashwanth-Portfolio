@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050a14;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0f1e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00b4ff;
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 180, 255, 0.15);
+  }
+
+  .neon-text {
+    color: #00b4ff;
+    text-shadow: 0 0 20px rgba(0, 180, 255, 0.5);
+  }
+
+  .neon-border {
+    border: 2px solid #00b4ff;
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.4), inset 0 0 15px rgba(0, 180, 255, 0.05);
+  }
+
+  .glow-btn {
+    background: linear-gradient(135deg, #00b4ff, #0066ff);
+    box-shadow: 0 0 20px rgba(0, 180, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .glow-btn:hover {
+    box-shadow: 0 0 35px rgba(0, 180, 255, 0.7);
+    transform: translateY(-2px);
+  }
+
+  .outline-btn {
+    border: 1.5px solid #00b4ff;
+    color: #00b4ff;
+    transition: all 0.3s ease;
+  }
+
+  .outline-btn:hover {
+    background: rgba(0, 180, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 180, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #00b4ff, #0066ff);
+    margin: 0 auto 3rem;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+  }
+}
