@@ -48,13 +48,21 @@ export default function Hero() {
             >
               View Projects
             </button>
-            <a
-              href="/resume.pdf"
-              download
+            <button
+              onClick={async () => {
+                const res = await fetch('/resume.pdf')
+                const blob = await res.blob()
+                const url = URL.createObjectURL(blob)
+                const a = document.createElement('a')
+                a.href = url
+                a.download = 'Yashwanth_Chowdary_Mannem_Resume.pdf'
+                a.click()
+                URL.revokeObjectURL(url)
+              }}
               className="outline-btn px-7 py-3 rounded-full font-semibold text-sm"
             >
               Download Resume
-            </a>
+            </button>
           </motion.div>
         </div>
 
